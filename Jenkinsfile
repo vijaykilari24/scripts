@@ -33,6 +33,7 @@ node('fission') {
                       url: "${GIT_REPO}"
                 ]]
             ])
+            sh 'cp /var/lib/jenkins/workspace/010-declarative /app '
             sh 'mkdir -p ${PROJECT_DIR}/${VIR_ENV}' 
             sh 'cd ${PROJECT_DIR}/${VIR_ENV}'
             
