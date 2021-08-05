@@ -18,6 +18,7 @@ node('fission') {
         dir("/app")
         {
             sh "pwd"
+            sh 'echo "Hello world" >>s1.txt'
         }
         checkout([
               $class: 'GitSCM',
