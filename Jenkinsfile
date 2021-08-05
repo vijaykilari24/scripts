@@ -34,7 +34,7 @@ node('fission') {
         }
         
     stage('creating virtualenv'){
-        sh 'python3 -m venv ${VIR_ENV_NAME}'
+        sh 'python3 -m venv loginserver'
         sh 'cd /app/${APP_REPO_NAME}/server'
 
         sh '/${PROJECT_DIR}/${VIR_ENV}/${VIR_ENV_NAME}/bin/pip install --upgrade pip'
