@@ -26,7 +26,10 @@ node('fission') {
                 [name: "*/master"]
               ],
               doGenerateSubmoduleConfigurations: false,
-              extensions: [],
+              extensions: [[
+         $class: 'SparseCheckoutPaths',
+         sparseCheckoutPaths: [[path: '/app']]
+       ]],
               submoduleCfg: [],
               userRemoteConfigs: [[
                       credentialsId: 'vijaykilari24',
