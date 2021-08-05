@@ -16,6 +16,9 @@ node('fission') {
     stage('pull'){
         sh 'cd "${PROJECT_DIR}/${APP_REPO_NAME}"'
         dir("/app")
+        {
+            sh "pwd"
+        }
         checkout([
               $class: 'GitSCM',
               branches: [
